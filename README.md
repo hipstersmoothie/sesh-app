@@ -20,11 +20,11 @@ Options, set as environment variables:
 
 | Variable | Default | |
 |---|---|---|
-| `SESH_LISTEN` | Tailscale IP, else `0.0.0.0` | Address to listen on |
+| `SESH_LISTEN` | `0.0.0.0` | Address to listen on |
 | `SESH_INSTALL_DIR` | `~/.local/bin` | Where the binaries go |
 | `SESH_NO_SERVICE=1` | | Install the binaries only |
 
-Traffic isn't encrypted. Use a private network such as Tailscale, and don't expose port 4777 to the internet. Devices must pair with a one-time code before they can connect.
+Devices must pair with a one-time code before they can connect. Connections are encrypted (TLS with the host's own certificate, which pairing pins), so any network works; use a VPN such as Tailscale to reach the host from outside its network.
 
 ## Homebrew
 
@@ -33,7 +33,7 @@ brew tap hipstersmoothie/sesh https://github.com/hipstersmoothie/sesh-app
 brew install sesh
 ```
 
-`brew services start sesh` serves this machine only. To let other devices connect, run `seshd install --host <Tailscale IP>`, then `sesh pair`.
+`brew services start sesh` serves this machine only. To let other devices connect, run `seshd install --host 0.0.0.0`, then `sesh pair`.
 
 ## What a host needs
 
