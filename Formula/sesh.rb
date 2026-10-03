@@ -6,16 +6,16 @@ class Sesh < Formula
 
   on_macos do
     url "https://sesh.codes/releases/v0.3.0/sesh-0.3.0-macos-universal.tar.gz"
-    sha256 "169bf8954969b0485db700c624dda5b3d08655ca8b8d3a80c3adc3e7dac029f4"
+    sha256 "548b15cec4371cf3ea648dad96e0aac60d75b883ba2f722691fbe1b21012b999"
   end
   on_linux do
     on_intel do
       url "https://sesh.codes/releases/v0.3.0/sesh-0.3.0-linux-x86_64.tar.gz"
-      sha256 "b9c15fad49363b924fec91c2c624ba014daf8848a46f40682f7282c19a74ee4d"
+      sha256 "a2a3fca18bbc86e8b9d6c72737aca69cf65c88a368cdc0a532d13f961e048304"
     end
     on_arm do
       url "https://sesh.codes/releases/v0.3.0/sesh-0.3.0-linux-aarch64.tar.gz"
-      sha256 "9dc8b1bec4493c1a7a726f573f6ce319b3f08243b53947f67f83cc2ca48e1376"
+      sha256 "1f95dfb0a3eec217e89776a66bee34c71ac2c7d755e93823adb27bd1a18f4e48"
     end
   end
 
